@@ -1,9 +1,9 @@
 from flask import Flask
-from routes import bp
+from routes.factors import bp as factors_bp
 
 def create_app(*args, **kwargs):
     app = Flask(__name__)
-    # app.register_blueprint(bp, url_prefix="/api")
+    app.register_blueprint(factors_bp, url_prefix="/api")
 
     @app.route("/")
     def index():

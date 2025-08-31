@@ -1,0 +1,14 @@
+# Ambiente virtual
+venv/
+__pycache__/
+*.pyc
+
+# Arquivos de build temporários
+*.log
+*.tmp
+
+# Dados locais que não precisam ir pro GitHub
+Base de dados.xlsx
+
+# ⚠️ IMPORTANTE: manter o banco SQLite
+# NÃO ignore base.db → precisa estar no repositório
