@@ -1,16 +1,10 @@
 from flask import Flask
-from routes.factors import bp as factors_bp
 
-def create_app(*args, **kwargs):
-    app = Flask(__name__)
-    app.register_blueprint(factors_bp, url_prefix="/api")
+app = Flask(__name__)
 
-    @app.route("/")
-    def index():
-        return {"ok": True, "service": "Devocional API"}
-
-    return app
+@app.route("/")
+def home():
+    return {"ok": True, "msg": "API Devocional básica no ar!"}
 
 if __name__ == "__main__":
-    app = create_app()
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000)
